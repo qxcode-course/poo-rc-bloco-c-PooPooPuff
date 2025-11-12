@@ -142,7 +142,42 @@
         },
         {
             "label": "2025-11-12_14-55-50",
-            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{Person.getname}\"\n\nclass Market:\n    def __init__(self,counters_num:int=0):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n        for _ in range(counters_num):\n            self.__counters.append(None)\n\n    def __str__(self):\n        slots=\", \".join([str(x) if x else \"-----\" for x in self.__counters])\n        queue=\", \".join([str(x) for x in self.queue])\n        return f\"Caixas: [{slots}]\\nEspera: [{queue}]\"\n    \n    def arrive(self,person:Person):\n        self.queue.append(person)\n    \n    def call(self,queue_position:int):\n        self.__counters[queue_position]=self.queue[0]\n        del self.queue[0]\n\n    def finish(self,queue_position:int) -> Person|None:\n        if self.__counters is None:\n            print(\"fail: caixa vazio\")\n            return None\n        aux=self.__counters(queue_position)\n        self.__counters(queue_position)=None\n        return aux\n\ndef main():\n    market=Market(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n        elif args[0]==\"arrive\":\n            market.arrive(str(args[1]))\n        elif args[0]==\"call\":\n            market.call(int(args[1]))\n        elif args[0]==\"finish\":\n            market.finish(int(args[1]))\n\nmain()",
+            "content": "@@ -1105,17 +1105,16 @@\n sition)=\n-=\n None%0A   \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_14-57-07",
+            "content": "@@ -1105,16 +1105,17 @@\n sition)=\n+=\n None%0A   \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_14-57-30",
+            "content": "@@ -906,16 +906,30 @@\n on:int) \n+-%3E Person%7CNone\n :%0A      \n@@ -930,17 +930,16 @@\n         \n-#\n if self.\n@@ -968,17 +968,16 @@\n         \n-#\n   print(\n@@ -1013,9 +1013,8 @@\n     \n-#\n retu\n@@ -1204,17 +1204,8 @@\n t()%0A\n-        %0A\n     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_15-00-37",
+            "content": "@@ -890,33 +890,28 @@\n elf,\n-index:int) -%3E Person%7CNone\n+queue_position:int) \n :%0A  \n@@ -916,16 +916,17 @@\n         \n+#\n if self.\n@@ -947,32 +947,33 @@\n None:%0A          \n+#\n   print(%22fail: c\n@@ -993,24 +993,25 @@\n             \n+#\n return None%0A\n@@ -1038,21 +1038,30 @@\n ounters(\n-index\n+queue_position\n )%0A      \n@@ -1082,13 +1082,22 @@\n ers(\n-index\n+queue_position\n )=No\n@@ -1168,16 +1168,16 @@\n e True:%0A\n-\n         \n@@ -1189,16 +1189,25 @@\n input()%0A\n+        %0A\n         \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-12_15-01-07",
+            "content": "@@ -882,38 +882,29 @@\n finish(self,\n-queue_position\n+index\n :int) -%3E Per\n@@ -1040,30 +1040,21 @@\n ounters(\n-queue_position\n+index\n )%0A      \n@@ -1071,30 +1071,21 @@\n ounters(\n-queue_position\n+index\n )=None%0A \n@@ -1136,16 +1136,16 @@\n rket(0)%0A\n+\n     whil\n@@ -1156,17 +1156,8 @@\n ue:%0A\n-        %0A\n     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_15-01-26",
+            "content": "@@ -222,23 +222,26 @@\n turn f%22%7B\n-self.__\n+Person.get\n name%7D%22%0A%0A\n@@ -948,32 +948,16 @@\n counters\n-%5Bqueue_position%5D\n  is None\n@@ -1179,16 +1179,25 @@\n e True:%0A\n+        %0A\n         \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-12_15-02-57",
+            "content": "@@ -1053,33 +1053,33 @@\n =self.__counters\n-%5B\n+(\n queue_position%5D%0A\n@@ -1076,17 +1076,17 @@\n position\n-%5D\n+)\n %0A       \n@@ -1093,33 +1093,33 @@\n  self.__counters\n-%5B\n+(\n queue_position%5D=\n@@ -1116,17 +1116,17 @@\n position\n-%5D\n+)\n =None%0A  \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_15-03-27",
+            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{self.__name}\"\n\nclass Market:\n    def __init__(self,counters_num:int=0):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n        for _ in range(counters_num):\n            self.__counters.append(None)\n\n    def __str__(self):\n        slots=\", \".join([str(x) if x else \"-----\" for x in self.__counters])\n        queue=\", \".join([str(x) for x in self.queue])\n        return f\"Caixas: [{slots}]\\nEspera: [{queue}]\"\n    \n    def arrive(self,person:Person):\n        self.queue.append(person)\n    \n    def call(self,queue_position:int):\n        self.__counters[queue_position]=self.queue[0]\n        del self.queue[0]\n\n    def finish(self,queue_position:int) -> Person|None:\n        if self.__counters[queue_position] is None:\n            print(\"fail: caixa vazio\")\n            return None\n        aux=self.__counters[queue_position]\n        self.__counters[queue_position]=None\n        return aux\n\ndef main():\n    market=Market(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n        elif args[0]==\"arrive\":\n            market.arrive(str(args[1]))\n        elif args[0]==\"call\":\n            market.call(int(args[1]))\n        elif args[0]==\"finish\":\n            market.finish(int(args[1]))\n\nmain()",
             "lines": "61"
         }
     ]

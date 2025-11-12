@@ -9,7 +9,7 @@ class Person:
         self.__name=name
 
     def __str__(self):
-        return f"{Person.getname}"
+        return f"{self.__name}"
 
 class Market:
     def __init__(self,counters_num:int=0):
@@ -31,11 +31,11 @@ class Market:
         del self.queue[0]
 
     def finish(self,queue_position:int) -> Person|None:
-        if self.__counters is None:
+        if self.__counters[queue_position] is None:
             print("fail: caixa vazio")
             return None
-        aux=self.__counters(queue_position)
-        self.__counters(queue_position)=None
+        aux=self.__counters[queue_position]
+        self.__counters[queue_position]=None
         return aux
 
 def main():
