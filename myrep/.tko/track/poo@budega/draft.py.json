@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2025-11-03_16-37-50",
-            "content": "",
-            "lines": "0"
+            "content": "@@ -1,12 +1,31 @@\n+@@ -1,400 +0,0 @@%0A-\n class Person\n@@ -25,17 +25,19 @@\n  Person:\n-%0A\n+%250A\n     def \n@@ -60,17 +60,19 @@\n me:str):\n-%0A\n+%250A\n         \n@@ -79,34 +79,38 @@\n self.__name=name\n-%0A%0A\n+%250A%250A\n     def getname(\n@@ -111,25 +111,27 @@\n tname(self):\n-%0A\n+%250A\n         retu\n@@ -140,26 +140,30 @@\n  self.__name\n-%0A%0A\n+%250A%250A\n     def setn\n@@ -185,15 +185,19 @@\n tr)-\n-%3E\n+%253E\n None:\n-%0A\n+%250A\n     \n@@ -216,18 +216,22 @@\n ame=name\n-%0A%0A\n+%250A%250A\n     def \n@@ -236,33 +236,35 @@\n f __str__(self):\n-%0A\n+%250A\n         return f\n@@ -267,10 +267,14 @@\n rn f\n-%22%7B\n+%2522%257B\n Pers\n@@ -287,12 +287,20 @@\n name\n-%7D%22%0A%0A\n+%257D%2522%250A%250A\n clas\n@@ -312,172 +312,20 @@\n ket:\n-%0A    def __init__(self,counters_num:int):%0A        self.__counters:list%5BPerson%7CNone%5D=%5B%5D%0A        self.queue:list%5BPerson%5D=%5B%5D%0A%0A    def __str__(self):%0A        return %0A%0A%0A\n+%250A%250A%250A%250A\n def \n@@ -331,17 +331,19 @@\n  main():\n-%0A\n+%250A\n     mark\n@@ -353,17 +353,19 @@\n Market()\n-%0A\n+%250A\n     whil\n@@ -371,17 +371,19 @@\n le True:\n-%0A\n+%250A\n         \n@@ -394,17 +394,19 @@\n =input()\n-%0A\n+%250A\n         \n@@ -415,18 +415,24 @@\n int(\n-%22$%22\n+%2522$%2522\n +line)\n-%0A\n+%250A\n     \n@@ -456,14 +456,31 @@\n it()\n-%0A%0A%0A%0A\n+%250A%250A        %250A%250A\n main()\n+%0A\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-12_14-14-54",
+            "content": "@@ -541,179 +541,8 @@\n ()%0A%0A\n-        if args%5B0%5D==%22end%22:%0A            break%0A        elif args%5B0%5D==%22show%22:%0A            print(market)%0A        elif args%5B0%5D==%22init%22:%0A            market=Market(int(args%5B1%5D)) \n %0A%0Ama\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_14-17-14",
+            "content": "@@ -451,10 +451,8 @@\n ket(\n-%22%22\n )%0A  \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-12_14-17-36",
+            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{Person.getname}\"\n\nclass Market:\n    def __init__(self,counters_num:int):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n\n    def __str__(self):\n        return \n\n\ndef main():\n    market=Market(\"\")\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n\nmain()",
+            "lines": "37"
         }
     ]
 }
