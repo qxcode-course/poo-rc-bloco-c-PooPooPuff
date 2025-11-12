@@ -12,17 +12,22 @@ class Person:
         return f"{Person.getname}"
 
 class Market:
-    def __init__(self,counters_num:int):
+    def __init__(self,counters_num:int=0):
         self.__counters:list[Person|None]=[]
         self.queue:list[Person]=[]
+        for i in range(counters_num):
+            self.__counters.append(None)
 
     def __str__(self):
-        slot=", "
-        queue=", "
-        return f"Caixas: "
+        slots=", ".join([str(x) if x else "-----" for x in self.__counters])
+        queue=", ".join([str(x) for x in self.queue])
+        return f"Caixas: [{slots}]\nEspera: [{queue}]"
+    
+    def arrive(self,person:Person):
+        self.queue.append(person)
 
 def main():
-    market=Market("")
+    market=Market(0)
     while True:
         line=input()
         print("$"+line)
@@ -34,5 +39,8 @@ def main():
             print(market)
         elif args[0]=="init":
             market=Market(int(args[1])) 
+        elif args[0]=="arrive":
+            market.arrive(str(args[1]))
+
 
 main()

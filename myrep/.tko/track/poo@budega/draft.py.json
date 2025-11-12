@@ -17,8 +17,108 @@
         },
         {
             "label": "2025-11-12_14-17-36",
-            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{Person.getname}\"\n\nclass Market:\n    def __init__(self,counters_num:int):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n\n    def __str__(self):\n        return \n\n\ndef main():\n    market=Market(\"\")\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n\nmain()",
+            "content": "@@ -411,63 +411,16 @@\n     \n-slot=%22, %22%0A        queue=%22, %22%0A        return f%22Caixas: %22\n+return %0A\n %0A%0Ade\n",
             "lines": "37"
+        },
+        {
+            "label": "2025-11-12_14-24-10",
+            "content": "@@ -415,179 +415,58 @@\n slot\n-s\n =%22, %22\n-.join(%5Bstr(x) if x else %22----%22 for x in self.__counters%5D)%0A        queue=%22, %22.join(%5Bstr(x) for x in self.queue%5D)%0A        return f%22Caixas: %5B%7Bslots%7D%5D%5CnEspera: %5B%7Bqueue%7D%5D\n+%0A        queue=%22, %22%0A        return f%22Caixas: \n %22%0A%0Ad\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-12_14-31-01",
+            "content": "@@ -378,87 +378,8 @@\n %5D=%5B%5D\n-%0A        for i in range(counters_num):%0A            self.__counters.append(None)\n %0A%0A  \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-12_14-34-29",
+            "content": "@@ -694,16 +694,18 @@\n =Market(\n+%22%22\n )%0A    wh\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-34-37",
+            "content": "@@ -694,17 +694,16 @@\n =Market(\n-0\n )%0A    wh\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-34-45",
+            "content": "@@ -525,17 +525,16 @@\n se %22----\n--\n %22 for x \n@@ -694,31 +694,17 @@\n =Market(\n-self.__counters\n+0\n )%0A    wh\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-35-05",
+            "content": "@@ -695,17 +695,31 @@\n =Market(\n-0\n+self.__counters\n )%0A    wh\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-35-16",
+            "content": "@@ -695,20 +695,17 @@\n =Market(\n-None\n+0\n )%0A    wh\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-35-25",
+            "content": "@@ -695,17 +695,20 @@\n =Market(\n-0\n+None\n )%0A    wh\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-35-36",
+            "content": "@@ -895,17 +895,16 @@\n         \n-#\n elif arg\n@@ -933,9 +933,8 @@\n     \n-#\n mark\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-36-08",
+            "content": "@@ -699,9 +699,9 @@\n ket(\n-2\n+0\n )%0A  \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-36-28",
+            "content": "@@ -695,17 +695,17 @@\n =Market(\n-0\n+2\n )%0A    wh\n@@ -887,32 +887,33 @@\n market)%0A        \n+#\n elif args%5B0%5D==%22i\n@@ -926,24 +926,25 @@\n             \n+#\n market=Marke\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-36-40",
+            "content": "@@ -296,13 +296,8 @@\n :int\n-=None\n ):%0A \n@@ -695,20 +695,17 @@\n =Market(\n-None\n+0\n )%0A    wh\n@@ -957,29 +957,16 @@\n gs%5B1%5D)) \n-%0A        elif\n %0A%0Amain()\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-12_14-37-29",
+            "content": "@@ -978,9 +978,8 @@\n     \n-#\n elif\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-12_14-37-38",
+            "content": "@@ -700,17 +700,20 @@\n =Market(\n-0\n+None\n )%0A    wh\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-12_14-37-45",
+            "content": "@@ -293,17 +293,20 @@\n num:int=\n-0\n+None\n ):%0A     \n@@ -967,24 +967,25 @@\n )) %0A        \n+#\n elif%0A%0Amain()\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-12_14-37-55",
+            "content": "@@ -968,16 +968,20 @@\n         \n+elif\n %0A%0Amain()\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-12_14-38-02",
+            "content": "@@ -669,83 +669,8 @@\n e%7D%5D%22\n-%0A    %0A    def arrive(self,person:Person):%0A        self.queue.append(person)\n %0A%0Ade\n@@ -972,32 +972,8 @@\n     \n-elif args%5B0%5D==%22arrive%22:%0A\n %0A%0Ama\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-12_14-39-41",
+            "content": "@@ -1071,36 +1071,8 @@\n e%22:%0A\n-            market.arrive()%0A\n %0A%0Ama\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-12_14-40-11",
+            "content": "@@ -1097,20 +1097,8 @@\n ive(\n-str(args%5B1%5D)\n )%0A%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-11-12_14-40-46",
+            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{Person.getname}\"\n\nclass Market:\n    def __init__(self,counters_num:int=0):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n        for i in range(counters_num):\n            self.__counters.append(None)\n\n    def __str__(self):\n        slots=\", \".join([str(x) if x else \"-----\" for x in self.__counters])\n        queue=\", \".join([str(x) for x in self.queue])\n        return f\"Caixas: [{slots}]\\nEspera: [{queue}]\"\n    \n    def arrive(self,person:Person):\n        self.queue.append(person)\n\ndef main():\n    market=Market(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n        elif args[0]==\"arrive\":\n            market.arrive(str(args[1]))\n\n\nmain()",
+            "lines": "46"
         }
     ]
 }
