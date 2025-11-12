@@ -117,8 +117,33 @@
         },
         {
             "label": "2025-11-12_14-40-46",
-            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{Person.getname}\"\n\nclass Market:\n    def __init__(self,counters_num:int=0):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n        for i in range(counters_num):\n            self.__counters.append(None)\n\n    def __str__(self):\n        slots=\", \".join([str(x) if x else \"-----\" for x in self.__counters])\n        queue=\", \".join([str(x) for x in self.queue])\n        return f\"Caixas: [{slots}]\\nEspera: [{queue}]\"\n    \n    def arrive(self,person:Person):\n        self.queue.append(person)\n\ndef main():\n    market=Market(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n        elif args[0]==\"arrive\":\n            market.arrive(str(args[1]))\n\n\nmain()",
+            "content": "@@ -744,132 +744,8 @@\n son)\n-%0A    %0A    def call(self,queue_position:int):%0A        self.__counters%5Bqueue_position%5D=self.queue%5B0%5D%0A        del self.queue%5B0%5D\n %0A%0Ade\n@@ -1111,76 +1111,8 @@\n %5D))%0A\n-        elif args%5B0%5D==%22call%22:%0A            market.call(int(args%5B1%5D))%0A\n %0A%0Ama\n",
             "lines": "46"
+        },
+        {
+            "label": "2025-11-12_14-49-40",
+            "content": "@@ -870,272 +870,8 @@\n 0%5D%0A%0A\n-    def finish(self,queue_position:int) -%3E Person%7CNone:%0A        if self.__counters is None:%0A            print(%22fail: caixa vazio%22)%0A            return None%0A        aux=self.__counters(queue_position)%0A        self.__counters(queue_position)=None%0A        return aux%0A%0A\n def \n@@ -1303,79 +1303,8 @@\n %5D))%0A\n-        elif args%5B0%5D==%22finish%22:%0A            market.finish(int(args%5B1%5D))\n %0A%0Ama\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-12_14-53-49",
+            "content": "@@ -389,17 +389,17 @@\n     for \n-_\n+i\n  in rang\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_14-55-17",
+            "content": "@@ -930,17 +930,16 @@\n         \n-#\n if self.\n@@ -970,17 +970,16 @@\n         \n-#\n print(%22f\n@@ -1013,9 +1013,8 @@\n     \n-#\n retu\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_14-55-41",
+            "content": "@@ -930,16 +930,17 @@\n         \n+#\n if self.\n@@ -967,24 +967,25 @@\n             \n+#\n print(%22fail:\n@@ -1007,24 +1007,25 @@\n             \n+#\n return None%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-12_14-55-50",
+            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{Person.getname}\"\n\nclass Market:\n    def __init__(self,counters_num:int=0):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n        for _ in range(counters_num):\n            self.__counters.append(None)\n\n    def __str__(self):\n        slots=\", \".join([str(x) if x else \"-----\" for x in self.__counters])\n        queue=\", \".join([str(x) for x in self.queue])\n        return f\"Caixas: [{slots}]\\nEspera: [{queue}]\"\n    \n    def arrive(self,person:Person):\n        self.queue.append(person)\n    \n    def call(self,queue_position:int):\n        self.__counters[queue_position]=self.queue[0]\n        del self.queue[0]\n\n    def finish(self,queue_position:int) -> Person|None:\n        if self.__counters is None:\n            print(\"fail: caixa vazio\")\n            return None\n        aux=self.__counters(queue_position)\n        self.__counters(queue_position)=None\n        return aux\n\ndef main():\n    market=Market(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n        elif args[0]==\"arrive\":\n            market.arrive(str(args[1]))\n        elif args[0]==\"call\":\n            market.call(int(args[1]))\n        elif args[0]==\"finish\":\n            market.finish(int(args[1]))\n\nmain()",
+            "lines": "61"
         }
     ]
 }

@@ -18,8 +18,7 @@ sources:
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
-tasks:
-  poo@budega: '{rate:30}'
+tasks: {}
 flags:
   quests: 0
   tracks: 0

@@ -15,7 +15,7 @@ class Market:
     def __init__(self,counters_num:int=0):
         self.__counters:list[Person|None]=[]
         self.queue:list[Person]=[]
-        for i in range(counters_num):
+        for _ in range(counters_num):
             self.__counters.append(None)
 
     def __str__(self):
@@ -25,6 +25,18 @@ class Market:
     
     def arrive(self,person:Person):
         self.queue.append(person)
+    
+    def call(self,queue_position:int):
+        self.__counters[queue_position]=self.queue[0]
+        del self.queue[0]
+
+    def finish(self,queue_position:int) -> Person|None:
+        if self.__counters is None:
+            print("fail: caixa vazio")
+            return None
+        aux=self.__counters(queue_position)
+        self.__counters(queue_position)=None
+        return aux
 
 def main():
     market=Market(0)
@@ -41,6 +53,9 @@ def main():
             market=Market(int(args[1])) 
         elif args[0]=="arrive":
             market.arrive(str(args[1]))
-
+        elif args[0]=="call":
+            market.call(int(args[1]))
+        elif args[0]=="finish":
+            market.finish(int(args[1]))
 
 main()
