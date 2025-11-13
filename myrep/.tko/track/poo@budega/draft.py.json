@@ -177,8 +177,43 @@
         },
         {
             "label": "2025-11-12_15-03-27",
-            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{self.__name}\"\n\nclass Market:\n    def __init__(self,counters_num:int=0):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n        for _ in range(counters_num):\n            self.__counters.append(None)\n\n    def __str__(self):\n        slots=\", \".join([str(x) if x else \"-----\" for x in self.__counters])\n        queue=\", \".join([str(x) for x in self.queue])\n        return f\"Caixas: [{slots}]\\nEspera: [{queue}]\"\n    \n    def arrive(self,person:Person):\n        self.queue.append(person)\n    \n    def call(self,queue_position:int):\n        self.__counters[queue_position]=self.queue[0]\n        del self.queue[0]\n\n    def finish(self,queue_position:int) -> Person|None:\n        if self.__counters[queue_position] is None:\n            print(\"fail: caixa vazio\")\n            return None\n        aux=self.__counters[queue_position]\n        self.__counters[queue_position]=None\n        return aux\n\ndef main():\n    market=Market(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n        elif args[0]==\"arrive\":\n            market.arrive(str(args[1]))\n        elif args[0]==\"call\":\n            market.call(int(args[1]))\n        elif args[0]==\"finish\":\n            market.finish(int(args[1]))\n\nmain()",
+            "content": "@@ -786,108 +786,8 @@\n t):%0A\n-        if self.__counters is not None:%0A            print(%22fail: caixa ocupado%22)%0A            return%0A\n     \n",
             "lines": "61"
+        },
+        {
+            "label": "2025-11-13_00-36-32",
+            "content": "@@ -798,20 +798,25 @@\n if self.\n-slot\n+__counter\n s is not\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-13_00-36-45",
+            "content": "@@ -802,34 +802,13 @@\n elf.\n-__counters%5Bqueue_position%5D\n+slots\n  is \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-13_00-37-00",
+            "content": "@@ -902,96 +902,8 @@\n urn%0A\n-        if self.queue==None:%0A            print(%22fail: sem clientes%22)%0A            return%0A\n     \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-13_00-42-36",
+            "content": "@@ -909,20 +909,16 @@\n      if \n-not \n self.que\n@@ -919,16 +919,22 @@\n lf.queue\n+==None\n :%0A      \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-13_00-48-17",
+            "content": "@@ -1125,116 +1125,8 @@\n ne:%0A\n-        if queue_position%3E=self.__counters:%0A            print(%22fail: caixa inexistente%22)%0A            return%0A\n     \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-13_00-51-08",
+            "content": "@@ -1152,12 +1152,8 @@\n on%3E=\n-len(\n self\n@@ -1163,17 +1163,16 @@\n counters\n-)\n :%0A      \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-13_00-51-28",
+            "content": "class Person:\n    def __init__(self,name:str):\n        self.__name=name\n\n    def getname(self):\n        return self.__name\n\n    def setname(self,name:str)->None:\n        self.__name=name\n\n    def __str__(self):\n        return f\"{self.__name}\"\n\nclass Market:\n    def __init__(self,counters_num:int=0):\n        self.__counters:list[Person|None]=[]\n        self.queue:list[Person]=[]\n        for _ in range(counters_num):\n            self.__counters.append(None)\n\n    def __str__(self):\n        slots=\", \".join([str(x) if x else \"-----\" for x in self.__counters])\n        queue=\", \".join([str(x) for x in self.queue])\n        return f\"Caixas: [{slots}]\\nEspera: [{queue}]\"\n    \n    def arrive(self,person:Person):\n        self.queue.append(person)\n    \n    def call(self,queue_position:int):\n        if self.__counters[queue_position] is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        if not self.queue:\n            print(\"fail: sem clientes\")\n            return\n        self.__counters[queue_position]=self.queue[0]\n        del self.queue[0]\n\n    def finish(self,queue_position:int) -> Person|None:\n        if queue_position>=len(self.__counters):\n            print(\"fail: caixa inexistente\")\n            return\n        if self.__counters[queue_position] is None:\n            print(\"fail: caixa vazio\")\n            return None\n        aux=self.__counters[queue_position]\n        self.__counters[queue_position]=None\n        return aux\n\ndef main():\n    market=Market(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split()\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(market)\n        elif args[0]==\"init\":\n            market=Market(int(args[1])) \n        elif args[0]==\"arrive\":\n            market.arrive(str(args[1]))\n        elif args[0]==\"call\":\n            market.call(int(args[1]))\n        elif args[0]==\"finish\":\n            market.finish(int(args[1]))\n\nmain()",
+            "lines": "70"
         }
     ]
 }

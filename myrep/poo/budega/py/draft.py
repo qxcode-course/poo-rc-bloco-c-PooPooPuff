@@ -27,10 +27,19 @@ class Market:
         self.queue.append(person)
     
     def call(self,queue_position:int):
+        if self.__counters[queue_position] is not None:
+            print("fail: caixa ocupado")
+            return
+        if not self.queue:
+            print("fail: sem clientes")
+            return
         self.__counters[queue_position]=self.queue[0]
         del self.queue[0]
 
     def finish(self,queue_position:int) -> Person|None:
+        if queue_position>=len(self.__counters):
+            print("fail: caixa inexistente")
+            return
         if self.__counters[queue_position] is None:
             print("fail: caixa vazio")
             return None
