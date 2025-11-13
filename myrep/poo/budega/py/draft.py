@@ -61,7 +61,7 @@ def main():
         elif args[0]=="init":
             market=Market(int(args[1])) 
         elif args[0]=="arrive":
-            market.arrive(str(args[1]))
+            market.arrive(Person(args[1]))
         elif args[0]=="call":
             market.call(int(args[1]))
         elif args[0]=="finish":
