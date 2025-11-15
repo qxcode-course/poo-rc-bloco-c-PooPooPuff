@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-15_20-29-44",
+            "content": "@@ -32,20 +32,18 @@\n lf,size:\n-floa\n+in\n t):%0A    \n@@ -62,40 +62,13 @@\n ize:\n-float=0%0A        self.__%0A        \n+int=0\n %0Acla\n@@ -153,117 +153,8 @@\n None\n-%0A        self.__thickness:int=thickness%0A%0A    def __str__(self)-%3Estr:%0A        return f%22calibre: %7Bself.__size%7D%22\n %0A%0A  \n@@ -324,296 +324,24 @@\n tip \n-%0A        %0Adef main():%0A    pencil=Pencil(0)%0A    while True:%0A        line=input()%0A        print('$'+line)%0A        args=line.split(%22 %22)%0A        %0A        if args%5B0%5D==%22end%22:%0A            break%0A        elif args%5B0%5D==%22show%22:%0A            print(pencil)%0A        elif args%5B0%5D==%22init%22:%0A            %0Amain()\n+is not None%0A        \n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-11-15_22-02-47",
+            "content": "@@ -83,29 +83,16 @@\n  self.__\n-thickness:int\n %0A       \n@@ -130,28 +130,28 @@\n _(self,t\n-hickness:int\n+ip:Lead%7CNone\n ):%0A     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-15_22-15-34",
+            "content": "class Lead:\n    def __init__(self,size:float):\n        self.__size:float=0\n        self.__thickness:int\n        \nclass Pencil:\n    def __init__(self,thickness:int):\n        self.__tip:Lead|None=None\n        self.__thickness:int=thickness\n\n    def __str__(self)->str:\n        return f\"calibre: {self.__size}\"\n\n    def haslead(self)->bool:\n        if self.__tip is None:\n            print(\"fail: nao existe grafite\")\n            return\n        else:\n            return self.__tip \n        \ndef main():\n    pencil=Pencil(0)\n    while True:\n        line=input()\n        print('$'+line)\n        args=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(pencil)\n        elif args[0]==\"init\":\n            \nmain()",
+            "lines": "34"
+        }
+    ]
+}
