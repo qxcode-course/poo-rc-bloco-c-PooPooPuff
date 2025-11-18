@@ -1,23 +1,30 @@
 class Lead:
-    def __init__(self,size:float):
-        self.__size:float=0
-        self.__thickness:int
-        
-class Pencil:
-    def __init__(self,thickness:int):
-        self.__tip:Lead|None=None
+    def __init__(self,size:float,thickness:int,hardness:str):
+        self.__size:float=size
         self.__thickness:int=thickness
+        self.__hardness:str=hardness
+
+    def getthickness(self):
+        return self.__thickness
+    
+class Pencil:
+    def __init__(self,thickness:float):
+        self.__tip:Lead|None=None
+        self.__thickness:float=thickness
+        self.barrel:list[Lead]=[]
 
     def __str__(self)->str:
-        return f"calibre: {self.__size}"
+        tip=f"[{self.__tip}]" if self.__tip else "[]"
+        pencilbarrel= "".join([str(x) for x in self.barrel])
+        return f"calibre: {self.__thickness}, bico: {tip}, tambor: <{pencilbarrel}>"
 
-    def haslead(self)->bool:
-        if self.__tip is None:
-            print("fail: nao existe grafite")
+    def insert(self,lead:Lead):
+        if lead.getthickness()!=self.__thickness:
+            print("fail: calibre incompatível")
             return
         else:
-            return self.__tip 
-        
+            self.barrel.append(lead)
+
 def main():
     pencil=Pencil(0)
     while True:
@@ -30,5 +37,11 @@ def main():
         elif args[0]=="show":
             print(pencil)
         elif args[0]=="init":
-            
+            pencil=Pencil(float(args[1]))
+        elif args[0]=="insert":
+            size=float(args[1])
+            thickness=int(args[3])
+            hardness=args[2]
+            lead=Lead(size,thickness,hardness)
+            pencil.insert(lead)
 main()
