@@ -22,3 +22,6 @@
 2025-11-13 00:53:18, EXEC, v:1, k:poo@budega, mode:FULL, rate:100, size:70
 2025-11-13 00:53:39, EXEC, v:1, k:poo@budega, mode:FULL, rate:100, size:70
 2025-11-13 00:53:39, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-13 00:55:17, SELF, v:1, k:poo@budega, rate:100, guide:Ajuda_do_prof_tanto_com_codigo_como_com_a_aula, alone:10, study:120
+2025-11-13 00:57:01, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-13 00:57:03, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0, size:0

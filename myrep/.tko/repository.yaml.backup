@@ -12,14 +12,15 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-13 00:30:25'
+  cache_timestamp: '2025-11-18 20:32:51'
   filters:
   - listas
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
 tasks:
-  poo@budega: '{rate:100}'
+  poo@budega: '{rate:100, guide:Ajuda_do_prof_tanto_com_codigo_como_com_a_aula, alone:10,
+    study:120}'
 flags:
   quests: 0
   tracks: 0
