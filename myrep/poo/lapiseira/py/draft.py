@@ -10,6 +10,14 @@ class Lead:
     def getthickness(self):
         return self.__thickness
     
+    def gethardness(self):
+        return self.__hardness
+    
+    def getsize(self):
+        return self.__size
+    
+    #def desgaste(self):
+        #self.__size-=
 class Pencil:
     def __init__(self,thickness:float):
         self.__tip:Lead|None=None
@@ -42,6 +50,29 @@ class Pencil:
         if not self.__tip:
             print("fail: nao existe grafite no bico")
             return
+        
+        hardness=self.__tip.gethardness()
+        
+        if hardness=="HB":
+            desgaste=1
+        elif hardness=="2B":
+            desgaste=2
+        elif hardness=="4B":
+            desgaste=4
+        elif hardness=="6B":
+            desgaste=6
+            
+        size=self.__tip.getsize()
+        
+        if size<=10:
+            print("fail: tamanho insuficiente")
+            return
+        if size-desgaste<10:
+            print("fail: folha incompleta")
+            self._Pencil__tip._Lead__size=10
+            return
+        #Caralho isso daqui é genial V, adorei a descoberta
+        self._Pencil__tip._Lead__size-=desgaste
         
 def main():
     pencil=Pencil(0)

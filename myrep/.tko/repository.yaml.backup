@@ -12,7 +12,7 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-18 23:31:17'
+  cache_timestamp: '2025-11-19 17:49:32'
   filters:
   - listas
 expanded:
@@ -20,7 +20,8 @@ expanded:
 - poo@bloco_c-listas
 tasks:
   poo@budega: '{rate:100, guide:me_guiei_um_pouco_pelo_codigo_da_aula, alone:10, study:120}'
-  poo@lapiseira: '{rate:14}'
+  poo@lapiseira: '{rate:100, human:pedi_ajuda_de_colegas_pra_fazer_parte_do_desgaste_do_metodo_write,
+    alone:9, study:330}'
 flags:
   quests: 0
   tracks: 0

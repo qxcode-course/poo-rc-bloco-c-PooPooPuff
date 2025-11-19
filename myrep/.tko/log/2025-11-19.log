@@ -1,0 +1,17 @@
+2025-11-19 17:49:39, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-19 17:49:41, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:71
+2025-11-19 17:59:57, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:71, size:90
+2025-11-19 18:00:36, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:71, size:90
+2025-11-19 18:02:11, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:71
+2025-11-19 18:04:12, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:71, size:92
+2025-11-19 18:05:08, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:71, size:92
+2025-11-19 18:05:30, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:85, size:92
+2025-11-19 18:08:19, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:85, size:99
+2025-11-19 18:08:53, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:85, size:98
+2025-11-19 18:09:19, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:85, size:96
+2025-11-19 18:09:50, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:85, size:98
+2025-11-19 18:13:48, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:71, size:99
+2025-11-19 18:13:56, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:92, size:99
+2025-11-19 18:16:28, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:100, size:102
+2025-11-19 18:16:37, MOVE, v:1, k:poo@lapiseira, mode:BACK
+2025-11-19 18:18:14, SELF, v:1, k:poo@lapiseira, rate:100, human:pedi_ajuda_de_colegas_pra_fazer_parte_do_desgaste_do_metodo_write, alone:9, study:330
