@@ -1,9 +1,154 @@
 {
     "patches": [
         {
-            "label": "2025-11-13_00-57-03",
-            "content": "",
-            "lines": "0"
+            "label": "2025-11-18_20-35-57",
+            "content": "@@ -1219,24 +1219,30 @@\n     \n-hard\n+thick\n ness=\n+int(\n args%5B\n-2%5D\n+3%5D)\n %0A   \n@@ -1250,38 +1250,32 @@\n         \n-thick\n+hard\n ness=\n-int(\n args%5B\n-3%5D)\n+2%5D\n %0A       \n@@ -1298,22 +1298,22 @@\n ize,\n-hardness,thick\n+thickness,hard\n ness\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_20-37-12",
+            "content": "@@ -1219,30 +1219,24 @@\n     \n-thick\n+hard\n ness=\n-int(\n args%5B\n-3%5D)\n+2%5D\n %0A   \n@@ -1244,32 +1244,38 @@\n         \n-hard\n+thick\n ness=\n+int(\n args%5B\n-2%5D\n+3%5D)\n %0A       \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_20-53-33",
+            "content": "@@ -1298,22 +1298,22 @@\n ize,\n-thickness,hard\n+hardness,thick\n ness\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_20-53-48",
+            "content": "@@ -1289,16 +1289,21 @@\n ad=Lead(\n+size,\n thicknes\n@@ -1312,21 +1312,16 @@\n hardness\n-,size\n )%0A      \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_21-16-40",
+            "content": "@@ -1183,25 +1183,20 @@\n         \n-thickness\n+size\n =float(a\n@@ -1215,20 +1215,25 @@\n         \n-size\n+thickness\n =int(arg\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_21-17-03",
+            "content": "@@ -32,18 +32,20 @@\n lf,size:\n-in\n+floa\n t,thickn\n@@ -48,20 +48,18 @@\n ickness:\n-floa\n+in\n t,hardne\n@@ -87,18 +87,20 @@\n .__size:\n-in\n+floa\n t=size%0A \n@@ -115,36 +115,34 @@\n elf.__thickness:\n-floa\n+in\n t=thickness%0A    \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_21-18-03",
+            "content": "@@ -19,32 +19,41 @@\n f __init__(self,\n+size:int,\n thickness:float,\n@@ -64,25 +64,16 @@\n ness:str\n-,size:int\n ):%0A     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_21-21-00",
+            "content": "@@ -179,103 +179,8 @@\n ss%0A%0A\n-    def __str__(self):%0A        return f%22%5B%7Bself.__thickness%7D:%7Bself.__hardness%7D:%7Bself.__size%7D%5D%22%0A%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-18_21-25-29",
+            "content": "@@ -933,107 +933,8 @@\n d)%0A%0A\n-    def pull(self,value:int):%0A        self.__tip%5Bvalue%5D=self.barrel%5B0%5D%0A        del self.barrel%5B0%5D%0A%0A\n def \n@@ -1445,64 +1445,8 @@\n ad)%0A\n-        elif args%5B0%5D==%22pull%22:%0A            pencil.pull()%0A\n main\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-11-18_21-32-41",
+            "content": "@@ -1598,20 +1598,8 @@\n ull(\n-int(args%5B1%5D)\n )%0Ama\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-33-08",
+            "content": "@@ -1594,16 +1594,28 @@\n il.pull(\n+int(args%5B1%5D)\n )%0Amain()\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-33-55",
+            "content": "@@ -1574,38 +1574,8 @@\n l%22:%0A\n-            value:int=args%5B0%5D%0A\n     \n@@ -1594,21 +1594,16 @@\n il.pull(\n-value\n )%0Amain()\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-36-35",
+            "content": "@@ -1591,21 +1591,20 @@\n alue\n-=int(\n+:int=\n args%5B\n-1%5D)\n+0%5D\n %0A   \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-18_21-37-03",
+            "content": "@@ -977,16 +977,23 @@\n lf.__tip\n+%5Bvalue%5D\n =self.ba\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-18_21-38-01",
+            "content": "@@ -990,21 +990,17 @@\n .barrel%5B\n-value\n+0\n %5D%0A      \n@@ -1017,21 +1017,17 @@\n .barrel%5B\n-value\n+0\n %5D%0A%0Adef m\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-18_21-39-13",
+            "content": "@@ -1598,17 +1598,17 @@\n nt(args%5B\n-0\n+1\n %5D)%0A     \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-18_21-39-29",
+            "content": "@@ -942,24 +942,34 @@\n ef pull(self\n+,value:int\n ):%0A        s\n@@ -990,17 +990,21 @@\n .barrel%5B\n-0\n+value\n %5D%0A      \n@@ -1021,17 +1021,21 @@\n .barrel%5B\n-0\n+value\n %5D%0A%0Adef m\n@@ -1594,25 +1594,25 @@\n ue=int(args%5B\n-1\n+0\n %5D)%0A         \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-18_21-41-02",
+            "content": "@@ -1553,16 +1553,47 @@\n %22pull%22:%0A\n+            value=int(args%5B1%5D)%0A\n         \n@@ -1608,16 +1608,21 @@\n il.pull(\n+value\n )%0Amain()\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-18_21-41-20",
+            "content": "@@ -215,16 +215,17 @@\n eturn f%22\n+%5B\n %7Bself.__\n@@ -266,16 +266,17 @@\n .__size%7D\n+%5D\n %22%0A%0A    d\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-42-05",
+            "content": "@@ -215,17 +215,16 @@\n eturn f%22\n-%5B\n %7Bself.__\n@@ -265,17 +265,16 @@\n .__size%7D\n-%5D\n %22%0A%0A    d\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-42-21",
+            "content": "@@ -576,20 +576,20 @@\n ip else \n-None\n+%22%5B%5D%22\n %0A       \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-42-39",
+            "content": "@@ -541,16 +541,17 @@\n   tip=f%22\n+%5B\n %7Bself.__\n@@ -554,16 +554,17 @@\n f.__tip%7D\n+%5D\n %22 if sel\n@@ -580,12 +580,12 @@\n lse \n-%22%5B%5D%22\n+None\n %0A   \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-43-02",
+            "content": "@@ -951,115 +951,8 @@\n f):%0A\n-        if self.__tip is not None:%0A            print(%22fail: ja existe grafite no bico%22)%0A            return%0A\n     \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-18_21-43-35",
+            "content": "@@ -1118,65 +1118,8 @@\n l%5B0%5D\n-%0A        %0A    def remove(self):%0A        del self.__tip%5B0%5D\n %0A%0Ade\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-18_21-45-13",
+            "content": "@@ -1745,68 +1745,8 @@\n l()%0A\n-        elif args%5B0%5D==%22remove%22:%0A            pencil.remove()%0A\n main\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-18_21-45-32",
+            "content": "@@ -1168,16 +1168,19 @@\n lf.__tip\n+%5B0%5D\n %0A%0Adef ma\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-18_21-45-56",
+            "content": "@@ -1146,32 +1146,36 @@\n (self):%0A        \n+del \n self.__tip=None%0A\n@@ -1168,21 +1168,16 @@\n lf.__tip\n-=None\n %0A%0Adef ma\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-18_21-46-13",
+            "content": "@@ -1175,136 +1175,8 @@\n ne%0A%0A\n-    def write(self):%0A        if not self.tip:%0A            print(%22fail: nao existe grafite no bico%22)%0A            return%0A        %0A\n def \n@@ -1803,66 +1803,8 @@\n e()%0A\n-        elif args%5B0%5D==%22write%22:%0A            pencil.write()%0A\n main\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-18_21-49-19",
+            "content": "@@ -1208,26 +1208,24 @@\n if not self.\n-__\n tip:%0A       \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-18_21-49-28",
+            "content": "class Lead:\n    def __init__(self,thickness:float,hardness:str,size:int):\n        self.__size:int=size\n        self.__thickness:float=thickness\n        self.__hardness:str=hardness\n\n    def __str__(self):\n        return f\"[{self.__thickness}:{self.__hardness}:{self.__size}]\"\n\n    def getthickness(self):\n        return self.__thickness\n    \nclass Pencil:\n    def __init__(self,thickness:float):\n        self.__tip:Lead|None=None\n        self.__thickness:float=thickness\n        self.barrel:list[Lead]=[]\n\n    def __str__(self)->str:\n        tip=f\"{self.__tip}\" if self.__tip else \"[]\"\n        pencilbarrel= \"\".join([str(x) for x in self.barrel])\n        return f\"calibre: {self.__thickness}, bico: {tip}, tambor: <{pencilbarrel}>\"\n\n    def insert(self,lead:Lead):\n        if lead.getthickness()!=self.__thickness:\n            print(\"fail: calibre incompat\u00edvel\")\n            return\n        else:\n            self.barrel.append(lead)\n\n    def pull(self):\n        if self.__tip is not None:\n            print(\"fail: ja existe grafite no bico\")\n            return\n        self.__tip=self.barrel[0]\n        del self.barrel[0]\n        \n    def remove(self):\n        self.__tip=None\n\n    def write(self):\n        if not self.__tip:\n            print(\"fail: nao existe grafite no bico\")\n            return\n        \ndef main():\n    pencil=Pencil(0)\n    while True:\n        line=input()\n        print('$'+line)\n        args=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(pencil)\n        elif args[0]==\"init\":\n            pencil=Pencil(float(args[1]))\n        elif args[0]==\"insert\":\n            thickness=float(args[1])\n            size=int(args[3])\n            hardness=args[2]\n            lead=Lead(thickness,hardness,size)\n            pencil.insert(lead)\n        elif args[0]==\"pull\":\n            pencil.pull()\n        elif args[0]==\"remove\":\n            pencil.remove()\n        elif args[0]==\"write\":\n            pencil.write()\nmain()",
+            "lines": "71"
         }
     ]
 }

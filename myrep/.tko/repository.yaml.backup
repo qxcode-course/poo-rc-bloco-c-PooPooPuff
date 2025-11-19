@@ -12,15 +12,15 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-18 20:32:51'
+  cache_timestamp: '2025-11-18 23:31:17'
   filters:
   - listas
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
 tasks:
-  poo@budega: '{rate:100, guide:Ajuda_do_prof_tanto_com_codigo_como_com_a_aula, alone:10,
-    study:120}'
+  poo@budega: '{rate:100, guide:me_guiei_um_pouco_pelo_codigo_da_aula, alone:10, study:120}'
+  poo@lapiseira: '{rate:14}'
 flags:
   quests: 0
   tracks: 0
@@ -28,4 +28,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@budega
+selected: poo@lapiseira
