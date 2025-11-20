@@ -22,8 +22,103 @@
         },
         {
             "label": "2025-11-19_23-24-52",
-            "content": "class Client:\n    def __init__(self,id:str,phone:int):\n        self.__id:str=id\n        self.__phone:int=phone\n        \n    def getid(self):\n        return self.__id\n    \n    def getphone(self):\n        return self.__phone\n    \n    def setid(self,id:str):\n        self.__id=id\n    \n    def setphone(self,phone:int):\n        self.__phone=phone\n    \n    #def __str__(self):\n        \n    \n#class Theather:\n    #def __init__(self,capacity:int):\n        #self.__seats:list[]\ndef main():\n    #theather=Theather()\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        #elif args[0]==\"show\":\n            #print(theather)\nmain()",
+            "content": "@@ -379,16 +379,17 @@\n   %0A    %0A\n+#\n class Th\n@@ -396,24 +396,25 @@\n eather:%0A    \n+#\n def __init__\n@@ -438,24 +438,25 @@\n t):%0A        \n+#\n self.__seats\n@@ -465,36 +465,9 @@\n ist%5B\n-Client%7CNone%5D=%5BNone%5D*capacity\n+%5D\n %0Adef\n@@ -475,20 +475,21 @@\n main():%0A\n-\n     \n+#\n theather\n@@ -652,16 +652,17 @@\n         \n+#\n elif arg\n@@ -683,24 +683,25 @@\n             \n+#\n print(theath\n",
             "lines": "35"
+        },
+        {
+            "label": "2025-11-19_23-29-36",
+            "content": "@@ -491,114 +491,8 @@\n ity%0A\n-        %0A    def __str__(self):%0A        return %22 %22.join(%5Bstr(x) if x else %22%22 for x in self.__seats%5D)%0A    %0A\n def \n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-19_23-30-47",
+            "content": "@@ -627,17 +627,16 @@\n heather(\n-0\n )%0A    wh\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-31-10",
+            "content": "@@ -565,10 +565,10 @@\n lse \n-%5B%5D\n+%22%22\n  for\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-31-38",
+            "content": "@@ -565,10 +565,10 @@\n lse \n-%22%22\n+%5B%5D\n  for\n@@ -631,9 +631,9 @@\n her(\n-1\n+0\n )%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-31-58",
+            "content": "@@ -627,17 +627,17 @@\n heather(\n-0\n+1\n )%0A    wh\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-32-06",
+            "content": "@@ -631,9 +631,9 @@\n her(\n-1\n+0\n )%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-32-12",
+            "content": "@@ -566,10 +566,8 @@\n se %22\n-%5B%5D\n %22 fo\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-32-22",
+            "content": "@@ -566,13 +566,10 @@\n se %22\n------\n+%5B%5D\n %22 fo\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-32-48",
+            "content": "@@ -566,15 +566,13 @@\n se %22\n-%5B\n -----\n-%5D\n %22 fo\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-32-56",
+            "content": "@@ -563,16 +563,21 @@\n  else %22%5B\n+-----\n %5D%22 for x\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-34-01",
+            "content": "@@ -838,112 +838,8 @@\n er)%0A\n-        elif args%5B0%5D==%22init%22:%0A            capacity=int(args%5B1%5D)%0A            theather=Theather(capacity)%0A\n main\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-19_23-35-43",
+            "content": "@@ -566,9 +566,10 @@\n se %22\n--\n+%5B%5D\n %22 fo\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-41-51",
+            "content": "@@ -337,32 +337,33 @@\n =phone%0A    %0A    \n+#\n def __str__(self\n@@ -377,44 +377,8 @@\n     \n-return f%22%7Bself.__id%7D:%7Bself.__phone%7D%22\n %0A   \n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-43-26",
+            "content": "@@ -345,17 +345,16 @@\n    %0A    \n-#\n def __st\n@@ -375,9 +375,8 @@\n     \n-#\n  ret\n@@ -601,10 +601,9 @@\n se %22\n-%5B%5D\n+-\n %22 fo\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-44-16",
+            "content": "@@ -576,12 +576,8 @@\n rn %22\n-%5B%22+%22\n  %22.j\n@@ -603,9 +603,10 @@\n se %22\n--\n+%5B%5D\n %22 fo\n@@ -630,12 +630,8 @@\n ts%5D)\n-+%22%5D%22\n %0A   \n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-47-26",
+            "content": "@@ -337,32 +337,33 @@\n =phone%0A    %0A    \n+#\n def __str__(self\n@@ -364,32 +364,33 @@\n _(self):%0A       \n+#\n  return f%22%7Bself.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-47-48",
+            "content": "@@ -671,16 +671,17 @@\n heather(\n+1\n )%0A    wh\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-48-39",
+            "content": "@@ -671,17 +671,16 @@\n heather(\n-0\n )%0A    wh\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-48-58",
+            "content": "class Client:\n    def __init__(self,id:str,phone:int):\n        self.__id:str=id\n        self.__phone:int=phone\n        \n    def getid(self):\n        return self.__id\n    \n    def getphone(self):\n        return self.__phone\n    \n    def setid(self,id:str):\n        self.__id=id\n    \n    def setphone(self,phone:int):\n        self.__phone=phone\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__phone}\"\n    \nclass Theather:\n    def __init__(self,capacity:int):\n        self.__seats:list[Client|None]=[None]*capacity\n        \n    def __str__(self):\n        return \"[\"+\" \".join([str(x) if x else \"-\" for x in self.__seats])+\"]\"\n    \ndef main():\n    theather=Theather(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(theather)\n        elif args[0]==\"init\":\n            capacity=int(args[1])\n            theather=Theather(capacity)\nmain()",
+            "lines": "42"
         }
     ]
 }
