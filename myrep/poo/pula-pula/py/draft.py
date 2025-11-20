@@ -27,9 +27,28 @@ class Trampoline:
         
     def enter(self):
         kids=self.__waiting[0]
-        self.__playing.append(kids)
+        self.__playing.insert(0,kids)
         del self.__waiting[0]
-    
+        
+    def leave(self):
+        if not self.__playing:
+            return
+        kids=self.__playing[-1]
+        self.__waiting.append(kids)
+        del self.__playing[-1]
+        
+    def remove(self,name:str):
+        for x, kids in enumerate(self.__waiting):
+            if kids.getname()==name:
+                del self.__waiting[x]
+                return
+        for x, kids in enumerate(self.__playing):
+            if kids.getname()==name:
+                del self.__playing[x]
+                return
+        else:
+            print(f"fail: {name} nao esta no pula-pula")
+        
 def main():
     trampoline=Trampoline()
     while True:
@@ -47,4 +66,9 @@ def main():
             trampoline.arrive(Kids(name,age))
         elif args[0]=="enter":
             trampoline.enter()
+        elif args[0]=="leave":
+            trampoline.leave()
+        elif args[0]=="remove":
+            name=args[1]
+            trampoline.remove(name)
 main()
