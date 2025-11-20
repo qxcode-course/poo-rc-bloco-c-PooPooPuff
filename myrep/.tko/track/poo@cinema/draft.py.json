@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2025-11-19_22-27-06",
-            "content": "",
+            "content": "@@ -1,645 +0,0 @@\n-class Client:%0A    def __init__(self,id:str,phone:int):%0A        self.__id:str=id%0A        self.__phone:int=phone%0A        %0A    def getid(self):%0A        return self.__id%0A    %0A    def getphone(self):%0A        return self.__phone%0A    %0A    def setid(self,id:str):%0A        self.__id=id%0A    %0A    #def __str__(self):%0A        %0A    %0Aclass Theather:%0A    def __init__(self,capacity:int):%0A        self.__seats:list%5B%5D%0Adef main():%0A    theather=Theather()%0A    while True:%0A        line=input()%0A        print(%22$%22+line)%0A        args=line.split(%22 %22)%0A        %0A        if args%5B0%5D==%22end%22:%0A            break%0A        elif args%5B0%5D==%22show%22:%0A            print(theather)%0Amain()\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-11-19_23-23-53",
+            "content": "@@ -313,17 +313,16 @@\n   %0A    %0A\n-#\n class Th\n@@ -329,25 +329,24 @@\n eather:%0A    \n-#\n def __init__\n@@ -374,17 +374,16 @@\n         \n-#\n self.__s\n@@ -410,17 +410,16 @@\n ():%0A    \n-#\n theather\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-19_23-24-07",
+            "content": "@@ -586,17 +586,16 @@\n         \n-#\n elif arg\n@@ -620,17 +620,16 @@\n         \n-#\n print(th\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-19_23-24-22",
+            "content": "@@ -279,74 +279,8 @@\n    %0A\n-    def setphone(self,phone:int):%0A        self.__phone=phone%0A    %0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-19_23-24-52",
+            "content": "class Client:\n    def __init__(self,id:str,phone:int):\n        self.__id:str=id\n        self.__phone:int=phone\n        \n    def getid(self):\n        return self.__id\n    \n    def getphone(self):\n        return self.__phone\n    \n    def setid(self,id:str):\n        self.__id=id\n    \n    def setphone(self,phone:int):\n        self.__phone=phone\n    \n    #def __str__(self):\n        \n    \n#class Theather:\n    #def __init__(self,capacity:int):\n        #self.__seats:list[]\ndef main():\n    #theather=Theather()\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        #elif args[0]==\"show\":\n            #print(theather)\nmain()",
+            "lines": "35"
         }
     ]
 }
