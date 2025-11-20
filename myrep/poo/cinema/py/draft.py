@@ -25,6 +25,16 @@ class Theather:
     def __str__(self):
         return "["+" ".join([str(x) if x else "-" for x in self.__seats])+"]"
     
+    def __verifyindex(self,index:int):
+        if 0>index:
+            print("fail: cadeira nao existe")
+        return True
+    
+    def reserve(self,id:str,phone:int,index:int):
+        if not self.__verifyindex(index):
+            return
+        self.__seats[index]=Client(id,phone)
+    
 def main():
     theather=Theather(0)
     while True:
@@ -39,4 +49,9 @@ def main():
         elif args[0]=="init":
             capacity=int(args[1])
             theather=Theather(capacity)
+        elif args[0]=="reverse":
+            id:str=str(args[1])
+            phone:int=int(args[2])
+            index:int=int(args[3])
+            theather.reserve(id,phone,index)
 main()

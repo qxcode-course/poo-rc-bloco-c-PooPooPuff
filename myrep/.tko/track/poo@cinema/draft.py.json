@@ -117,8 +117,23 @@
         },
         {
             "label": "2025-11-19_23-48-58",
-            "content": "class Client:\n    def __init__(self,id:str,phone:int):\n        self.__id:str=id\n        self.__phone:int=phone\n        \n    def getid(self):\n        return self.__id\n    \n    def getphone(self):\n        return self.__phone\n    \n    def setid(self,id:str):\n        self.__id=id\n    \n    def setphone(self,phone:int):\n        self.__phone=phone\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__phone}\"\n    \nclass Theather:\n    def __init__(self,capacity:int):\n        self.__seats:list[Client|None]=[None]*capacity\n        \n    def __str__(self):\n        return \"[\"+\" \".join([str(x) if x else \"-\" for x in self.__seats])+\"]\"\n    \ndef main():\n    theather=Theather(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(theather)\n        elif args[0]==\"init\":\n            capacity=int(args[1])\n            theather=Theather(capacity)\nmain()",
+            "content": "@@ -641,299 +641,8 @@\n    %0A\n-    def __verifyindex(self,index:int):%0A        if 0%3Eindex:%0A            print(%22fail: cadeira nao existe%22)%0A        return True%0A    %0A    def reserve(self,id:str,phone:int,index:int):%0A        if not self.__verifyindex(index):%0A            return%0A        self.__seats%5Bindex%5D=Client(id,phone)%0A    %0A\n def \n",
             "lines": "42"
+        },
+        {
+            "label": "2025-11-19_23-53-15",
+            "content": "@@ -1275,174 +1275,8 @@\n ty)%0A\n-        elif args%5B0%5D==%22reverse%22:%0A            id:str=str(args%5B1%5D)%0A            phone:int=int(args%5B2%5D)%0A            index:int=int(args%5B3%5D)%0A            theather.reserve()%0A\n main\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-19_23-54-47",
+            "content": "@@ -1439,22 +1439,8 @@\n rve(\n-id,phone,index\n )%0Ama\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-19_23-55-00",
+            "content": "class Client:\n    def __init__(self,id:str,phone:int):\n        self.__id:str=id\n        self.__phone:int=phone\n        \n    def getid(self):\n        return self.__id\n    \n    def getphone(self):\n        return self.__phone\n    \n    def setid(self,id:str):\n        self.__id=id\n    \n    def setphone(self,phone:int):\n        self.__phone=phone\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__phone}\"\n    \nclass Theather:\n    def __init__(self,capacity:int):\n        self.__seats:list[Client|None]=[None]*capacity\n        \n    def __str__(self):\n        return \"[\"+\" \".join([str(x) if x else \"-\" for x in self.__seats])+\"]\"\n    \n    def __verifyindex(self,index:int):\n        if 0>index:\n            print(\"fail: cadeira nao existe\")\n        return True\n    \n    def reserve(self,id:str,phone:int,index:int):\n        if not self.__verifyindex(index):\n            return\n        self.__seats[index]=Client(id,phone)\n    \ndef main():\n    theather=Theather(0)\n    while True:\n        line=input()\n        print(\"$\"+line)\n        args=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(theather)\n        elif args[0]==\"init\":\n            capacity=int(args[1])\n            theather=Theather(capacity)\n        elif args[0]==\"reverse\":\n            id:str=str(args[1])\n            phone:int=int(args[2])\n            index:int=int(args[3])\n            theather.reserve(id,phone,index)\nmain()",
+            "lines": "57"
         }
     ]
 }

@@ -12,7 +12,7 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-19 22:31:14'
+  cache_timestamp: '2025-11-19 23:49:42'
   filters:
   - listas
 expanded:
@@ -21,11 +21,10 @@ expanded:
 tasks:
   poo@budega: '{rate:100, guide:me_guiei_um_pouco_pelo_codigo_da_aula, alone:10, study:120}'
   poo@lapiseira: '{rate:100, human:pedi_ajuda_de_colegas_pra_fazer_parte_do_desgaste_do_metodo_write,
-
     alone:9, study:330}'
   poo@pula-pula: '{rate:100, other:precisei_de_ajuda_em_foruns_pra_entender_a_diferenca_do_append_e_insert_no_codigo_e_tbm_de_como_usar_o_enumerate_da_forma_correta,
-
     alone:8, study:160}'
+  poo@cinema: '{rate:33, alone:3, study:40}'
 flags:
   quests: 0
   tracks: 0
